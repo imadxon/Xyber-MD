@@ -1,0 +1,21 @@
+{
+  "name": "XYBER_MD",
+  "description": "A powerful WhatsApp bot with anti-delete, anti-view-once, and auto status seen.",
+  "keywords": ["whatsapp", "bot", "xyber-md"],
+  "stack": "container",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "env": {
+    "SESSION_ID": {
+      "description": "Paste your session ID starting with 'XYBER-MD:~'",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    { "url": "heroku/nodejs" },
+    { "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git" },
+    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest" },
+    { "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git" }
+  ]
+}
